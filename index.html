@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Portfolio Boudount Youssef</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-BWKF09GDHK"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-BWKF09GDHK");
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-KHPPMF4J");
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styleIndex.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <!-- 
+    TODO : Faire le rapport du projet Wordle
+    TODO : Supprimer ancien rapport dans le depot
+  -->
+
+  <body class=" ">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-KHPPMF4J"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+
+    <!-- Icon Bar -->
+    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+      <!-- Avatar image in top left corner -->
+      <img src="img/profile-pic.png" style="width: 100%" />
+
+      <a href="#" class="w3-bar-item w3-button w3-padding-large" >
+          <i class="fa fa-home w3-xxlarge"></i>
+          <p data-translate="home">HOME</p>
+      </a>
+
+      <a href="#about" class="w3-bar-item w3-button w3-padding-large">
+          <i class="fa fa-user w3-xxlarge"></i>
+          <p data-translate="about">ABOUT</p>
+      </a>
+      <a href="#photos" class="w3-bar-item w3-button w3-padding-large">
+          <i class="fa fa-eye w3-xxlarge"></i>
+          <p data-translate="projects">PROJETS</p>
+      </a>
+      <a href="#contact" class="w3-bar-item w3-button w3-padding-large">
+          <i class="fa fa-envelope w3-xxlarge"></i>
+          <p data-translate="contact">CONTACT</p>
+      </a>
+      <a href="pages/CV.html" class="w3-bar-item w3-button w3-padding-large">
+          <i class="fa fa-address-card w3-xxlarge"></i>
+          <p data-translate="cv">CV</p>
+      </a>
+  
+      <!-- Switches Container -->
+      <div class="switches-container">
+          <!-- Existing Dark/Light Mode Switch -->
+          <label class="switch mode-switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+          </label>
+  
+          <!-- New Language Switch -->
+          <div class="language-switch-container">
+              <input hidden="" id="check" name="check" type="checkbox">
+              <label class="toggle" for="check">
+                  <div class="toggle__circle"></div>
+              </label>
+              <div class="toggle-text">
+                  <span>FR</span>
+                  <br />
+                  <span>EN</span>
+              </div>
+          </div>
+      </div>
+    </nav>
+
+    <div class="hamburger-bar">
+      <div class="hamburger" onclick="toggleHamburgerMenu()">☰</div>
+    </div>
+
+    <div id="hamburgerMenu" class="hamburger-menu">
+      <span class="close-btn" onclick="toggleHamburgerMenu()">×</span>
+      <a href="#" id="homeLink" data-translate="home">
+        <i class="fa fa-home"></i> HOME
+      </a>
+      <a href="#about" id="aboutLink" data-translate="about">
+        <i class="fa fa-user"></i> ABOUT
+      </a>
+      <a href="#photos" id="projectsLink" data-translate="projects">
+        <i class="fa fa-eye"></i> PROJETS
+      </a>
+      <a href="#contact" id="contactLink" data-translate="contact">
+        <i class="fa fa-envelope"></i> CONTACT
+      </a>
+      <a href="pages/CV.html" id="cvLink" data-translate="cv">
+        <i class="fa fa-address-card"></i> CV
+      </a>
+      <div class="switches-container">
+        <label class="switch mode-switch">
+          <input type="checkbox" />
+          <span class="slider"></span>
+        </label>
+        <div class="language-switch-container">
+          <input hidden="" id="check" name="check" type="checkbox">
+          <label class="toggle" for="check">
+            <div class="toggle__circle"></div>
+          </label>
+          <div class="toggle-text">
+            <span>FR</span>
+            <br />
+            <span>EN</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="w3-padding-large" id="main">
+      <!-- Header/Home -->
+      <header class="w3-container w3-padding-32 w3-center " id="home">
+        <h1 class="w3-jumbo">
+          <span class="text-animate">Adnane</span> <span class="text-animate">Mohamed</span>
+        </h1> <br /> <br />
+        <p data-translate="subtitle">Etudiant en informatique</p>
+
+        <hr style="width: 100%" class="w3-opacity w3-center" />
+        <div>
+          <a href="https://github.com/mohamedadnane1" target="_blank"
+            ><i class="fa fa-github faicons w3-hover-opacity animate__animated animate__bounce"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/mohamedadnne" target="_blank"
+            ><i class="fa fa-linkedin faicons w3-hover-opacity animate__animated animate__bounce"></i
+          ></a>
+          
+         
+          <a href="https://www.instagram.com/moha.adn8" target="_blank"
+            ><i class="fa fa-instagram faicons w3-hover-opacity animate__animated animate__bounce"></i
+          ></a>
+          
+        </div>
+        <hr style="width: 100%" class="w3-opacity w3-center" />
+      </header>
+
+      <!-- About Section -->
+      <div class="w3-content w3-justify w3-text-grey" id="about">
+        <div>
+          <!--Preentation  -->
+          <h2 class="section-title" data-translate="whoAmI">Qui suis-je ?</h2>
+          <hr style="width: 100%" class="w3-opacity w3-center" />
+
+          <p data-translate="welcomeMessage">
+            Bienvenue sur mon portfolio ! Actuellement en troiseme année de
+            Licence Informatique, je suis un jeune passionné de technologie et
+            de programmation, fort d'une curiosité insatiable depuis mon
+            enfance.
+          </p>
+          <p data-translate="wathIsThis">
+            Ce site est une vitrine de mes compétences diversifiées, des
+            initiatives de développement que j'ai pilotées, et des services sur
+            mesure que je peux offrir. Mon adaptabilité et ma soif
+            d'apprentissage me permettent de m'immerger dans des projets variés
+            avec enthousiasme. Que vous soyez à la recherche d'une collaboration
+            pour un projet innovant ou d'une expertise en développement, je suis
+            ouvert à toute opportunité et invite chaleureusement les
+            propositions.
+          </p>
+          <p data-translate="contactMe">
+            Contactez-moi et ensemble, transformons les idées en réalités
+            tangibles.
+          </p>
+        </div>
+
+        <div>
+          <br />
+          <h3 class="w3-padding-16 w3-center section-title" data-translate="mySkills" >Mes Skills</h3>
+          <hr style="width: 100%" class="w3-opacity w3-center" />
+          <br />
+        </div>
+
+        <div class="circles w3-center">
+          <!-- HTML Progress Bar -->
+          <div class="progress-bar-container w3-center">
+            <h2 class="skill-label">
+              <label for="html">HTML</label>
+            </h2>
+            <div class="progress-bar html">
+              <progress id="html" min="0" max="100" value="100"></progress>
+            </div>
+          </div>
+
+          <!-- CSS Progress Bar -->
+          <div class="progress-bar-container w3-center">
+            <h2 class="skill-label">
+              <label for="css">CSS</label>
+            </h2>
+            <div class="progress-bar css">
+              <progress id="css" min="0" max="100" value="100"></progress>
+            </div>
+          </div>
+
+          <!-- JSS Progress Bar -->
+          <div class="progress-bar-container w3-center">
+            <h2 class="skill-label w3-center">
+              <label for="js">JS</label>
+            </h2>
+            <div class="progress-bar js w3-center">
+              <progress id="js" min="0" max="100" value="100"></progress>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="circles w3-center">
+          <!-- PHP Progress Bar -->
+          <div class="progress-bar-container w3-center">
+            <h2 class="skill-label">
+              <label for="php">PHP</label>
+            </h2>
+            <div class="progress-bar php">
+              <progress id="php" min="0" max="100" value="100"></progress>
+            </div>
+          </div>
+
+          <!-- SQL Progress Bar -->
+          <div class="progress-bar-container w3-center">
+            <h2 class="skill-label">
+              <label for="sql">SQL</label>
+            </h2>
+            <div class="progress-bar sql">
+              <progress id="sql" min="0" max="100" value="100"></progress>
+            </div>
+          </div>
+
+          <!-- Python Progress Bar -->
+          <div class="progress-bar-container w3-center">
+            <h2 class="skill-label">
+              <label for="python">Python</label>
+            </h2>
+            <div class="progress-bar python">
+              <progress id="python" min="0" max="100" value="100"></progress>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="circles w3-center">
+          <!-- Java Progress Bar -->
+          <div class="progress-bar-container">
+            <h2 class="skill-label">
+              <label for="java">Java</label>
+            </h2>
+            <div class="progress-bar java">
+              <progress id="java" min="0" max="100" value="100"></progress>
+            </div>
+          </div>
+
+          <!-- CPP Progress Bar -->
+          <div class="progress-bar-container">
+            <h2 class="skill-label">
+              <label for="cpp">C++</label>
+            </h2>
+            <div class="progress-bar cpp">
+              <progress id="cpp" min="0" max="100" value="100"></progress>
+            </div>
+          </div>
+
+          <!-- C Progress Bar -->
+          <div class="progress-bar-container">
+            <h2 class="skill-label">
+              <label for="c">C</label>
+            </h2>
+            <div class="progress-bar c">
+              <progress id="c" min="0" max="100" value="100"></progress>
+            </div>
+          </div>
+        </div>
+        <br /><br />
+
+        <div>
+          <h3 class="w3-padding-16 section-title w3-center" data-translate="myStats">Mes Stats</h3>
+          <hr style="width: 100%" class="w3-opacity w3-center" />
+        </div>
+
+        <div class="w3-row w3-center w3-padding-16 w3-section ">
+          <div class="w3-quarter w3-section" >
+            <span class="w3-xlarge" >2+</span><br />
+            <div data-translate="stages" >Stages</div>
+          </div>
+          <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">20+</span><br />
+            <div data-translate="projectsDone" >Projets Réalisés</div>
+          </div>
+          <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">1+</span><br />
+            <div data-translate="contestsWon" >Concours Gagnés</div>
+          </div>
+          <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">3+</span><br />
+            <div data-translate="workshops" >Ateliers</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projects Section -->
+      <div class="w3-content" id="photos">
+        <h3 class="w3-padding-16 section-title w3-center" data-translate="projectsTitle" >Mes Projets</h3>
+        <hr style="width: 100%" class="w3-opacity w3-center" />
+
+        <!-- Dropdown Menu -->
+        <div class="w3-row w3-center w3-padding-16">
+          <div class="w3-third w3-container">
+            <select id="languageDropdown" class="w3-input w3-margin-bottom filter-dropdown" onchange="filterProjects()">
+              <option value="" data-translate="filterLanguage">Tous les langages</option>
+              <option value="java" data-translate="java">Java</option>
+              <option value="cpp" data-translate="cpp">C++</option>
+              <option value="python" data-translate="python">Python</option>
+              <option value="html css js" data-translate="htmlCssJs">HTML/CSS/JS</option>
+              <option value="php" data-translate="php">PHP</option>
+              <option value="java javafx" data-translate="javaFx">Java/JavaFX</option>
+              <option value="sql" data-translate="sql">SQL</option>
+              <option value="pgsql" data-translate="pgsql">PostgreSQL</option>
+              <option value="plsql" data-translate="plsql">PL/SQL</option>
+              <option value="bash" data-translate="bash">Bash</option>
+              <option value="assembly" data-translate="assembly">Assembly</option>
+              <option value="pascal" data-translate="pascal">Pascal</option>
+            </select>
+          </div>
+
+          <div class="w3-third w3-container">
+            <select id="typeDropdown" class="w3-input w3-margin-bottom filter-dropdown" onchange="filterProjects()">
+              <option value="" data-translate="filterType">Tous les types</option>
+              <option value="web" data-translate="web">Web</option>
+              <option value="desktop" data-translate="desktop">Desktop</option>
+              <option value="console" data-translate="terminal">Terminal</option>
+              <option value="mobile" data-translate="mobile">Mobile</option>
+            </select>
+          </div>
+
+          <div class="w3-third w3-container">
+            <select id="projectTypeDropdown" class="w3-input w3-margin-bottom filter-dropdown" onchange="filterProjects()">
+              <option value="" data-translate="filterProjectType">Tous les projets</option>
+              <option value="personnel" data-translate="personal">Personnel</option>
+              <option value="academique" data-translate="academic">Académique</option>
+            </select>
+          </div>
+
+          <div class="w3-third w3-container">
+            <button onclick="resetFilters()" class="renButton" data-translate="resetFilters">Réinitialiser les filtres</button>
+          </div>
+        </div>
+        <br />
+        <div id="projectContainer" class="project-container">
+
+          <!-- Projet CERICar -->
+<div class="w3-third project-card" data-lang="html css js php sql" data-type="web" data-project-type="academique">
+  <div class="card">
+    <img class="card-img-top parallax" src="img/GridProjects/cericar.png" style="width: 100%" />
+    <div class="card-body">
+      <h4 class="card-title">CERICar (Covoiturage)</h4>
+      <p class="card-text w3-text-black">HTML/CSS/PHP/JS/SQL</p>
+      <a href="pages/cericar.html" class="btn btn-primary">Voir</a>
+    </div>
+  </div>
+</div>
+
+<!-- Projet Amiibo -->
+<div class="w3-third project-card" data-lang="java android" data-type="mobile" data-project-type="academique">
+  <div class="card">
+    <img class="card-img-top parallax" src="img/GridProjects/icon.png" style="width: 100%" />
+    <div class="card-body">
+      <h4 class="card-title">Amiibo Quiz (Android)</h4>
+      <p class="card-text w3-text-black">Java/Android Studio</p>
+      <a href="pages/amiibo.html" class="btn btn-primary">Voir</a>
+    </div>
+  </div>
+</div>
+
+<!-- Projet Wordle -->
+<div class="w3-third project-card" data-lang="java javafx" data-type="desktop" data-project-type="academique">
+  <div class="card">
+    <img class="card-img-top parallax" src="img/GridProjects/wordle.png" style="width: 100%" />
+    <div class="card-body">
+      <h4 class="card-title">Wordle Game</h4>
+      <p class="card-text w3-text-black">JavaFX</p>
+      <a href="pages/wordle.html" class="btn btn-primary">Voir</a>
+    </div>
+  </div>
+</div>
+
+<!-- Site de vente -->
+<div class="w3-third project-card" data-lang="html css js php sql" data-type="web" data-project-type="personnel">
+  <div class="card">
+    <img class="card-img-top parallax" src="img/GridProjects/ecommerce.png" style="width: 100%" />
+    <div class="card-body">
+      <h4 class="card-title">Site de Vente en ligne</h4>
+      <p class="card-text w3-text-black">HTML/CSS/JS/PHP/SQL</p>
+      <a href="pages/sitevente.html" class="btn btn-primary">Voir</a>
+    </div>
+  </div>
+</div>
+
+<!-- Projet UML Vente Textile -->
+<div class="w3-third project-card" data-lang="uml" data-type="desktop" data-project-type="academique">
+  <div class="card">
+    <img class="card-img-top parallax" src="img/GridProjects/uml.png" style="width: 100%" />
+    <div class="card-body">
+      <h4 class="card-title">UML Vente Textile</h4>
+      <p class="card-text w3-text-black">UML/Conception</p>
+      <a href="pages/umltextile.html" class="btn btn-primary">Voir</a>
+    </div>
+  </div>
+</div>
+
+
+      <!-- Contact Section -->
+      <div class="w3-padding-32 w3-content" id="contact">
+        <h2 class="section-title" data-translate="contactTitle" >Contact</h2>
+        <hr style="width: 100%" class="w3-opacity w3-center" />
+
+        <div class="w3-section">
+          <p>
+            <i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i>
+            <span data-translate="address">Avignon, France</span>
+          </p>
+          <p>
+            <i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i>
+            <span data-translate="phoneLabel">Phone:</span>
+            <span >07 67 35 16 49</span>
+          </p>
+          <p>
+            <i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"></i>
+            <span data-translate="emailLabel">Email:</span>
+            <span >mohamedadnanelycee@gmail.com</span>
+          </p>
+        </div>
+
+        <br />
+        <p data-translate="leaveMessage">Laissez moi un message.</p>
+
+        <form action="https://formspree.io/f/xaygkwvk" method="POST" target="_blank">
+          <p>
+            <input class="w3-input w3-padding-16" type="text" placeholder="Nom" required name="Name" data-translate-placeholder="namePlaceholder"/>
+          </p>
+          <p>
+            <input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email" data-translate-placeholder="emailPlaceholder"/>
+          </p>
+          <p>
+            <input class="w3-input w3-padding-16" type="text" placeholder="Object" required name="Subject" data-translate-placeholder="subjectPlaceholder"/>
+          </p>
+          <p>
+            <input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message" data-translate-placeholder="messagePlaceholder"/>
+          </p>
+          <p>
+            <button class="w3-button w3-light-grey w3-padding-large" type="submit" data-translate="sendMessage">
+              <i class="fa fa-paper-plane"></i> ENVOYER MESSAGE
+            </button>
+          </p>
+        </form>
+        
+      </div>
+
+      <!-- Footer -->
+      <footer class="w3-content  w3-text-grey w3-xlarge">
+        <hr style="width: 100%" class="w3-opacity w3-center" />
+        <p class="w3-medium">
+          <span data-translate="credit">Réalisé par</span>
+          <a href="https://github.com/mohamedadnane1" target="_blank" class="w3-hover-text-green">Adnane</a>
+        </p>
+        <hr style="width: 100%" class="w3-opacity w3-center" />
+      </footer>
+
+    </div>
+
+    <script>
+      /************************
+       * Hamburger Menu
+      *************************/
+      function toggleHamburgerMenu() {
+        const menu = document.getElementById('hamburgerMenu');
+        menu.classList.toggle('active');
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        const menu = document.getElementById('hamburgerMenu');
+        const links = menu.querySelectorAll('a');
+
+        links.forEach(link => {
+          link.addEventListener('click', function() {
+            menu.classList.remove('active');
+          });
+        });
+      });
+
+
+      /************************
+       * Progress Bar Animation
+      *************************/
+      document.addEventListener('DOMContentLoaded', function() {
+        const progressBars = document.querySelectorAll('.w3-light-grey .w3-container');
+
+        progressBars.forEach((bar, index) => {
+          const width = bar.style.width;
+          bar.style.width = '0';
+          setTimeout(() => {
+            bar.style.transition = 'width 1.5s ease-in-out';
+            bar.style.width = width;
+          }, index * 200); // Delay each bar by 200ms
+        });
+      });
+
+      /************************
+       * Filter Projects
+      *************************/
+      let allProjectCards = [];
+
+      document.addEventListener('DOMContentLoaded', function() {
+        const projectCards = document.querySelectorAll('.project-card');
+        allProjectCards = Array.from(projectCards);
+      });
+
+      function filterProjects() {
+        const languageDropdown = document.getElementById('languageDropdown');
+        const typeDropdown = document.getElementById('typeDropdown');
+        const projectTypeDropdown = document.getElementById('projectTypeDropdown');
+
+        const languageFilter = languageDropdown.value.toLowerCase();
+        const typeFilter = typeDropdown.value.toLowerCase();
+        const projectTypeFilter = projectTypeDropdown.value.toLowerCase();
+
+        const projectContainer = document.getElementById('projectContainer');
+
+        projectContainer.innerHTML = '';
+
+        const filteredCards = allProjectCards.filter(card => {
+          const languages = card.getAttribute('data-lang').toLowerCase();
+          const type = card.getAttribute('data-type').toLowerCase();
+          const projectType = card.getAttribute('data-project-type').toLowerCase();
+
+          return (!languageFilter || languages.includes(languageFilter)) &&
+            (!typeFilter || type.includes(typeFilter)) &&
+            (!projectTypeFilter || projectType.includes(projectTypeFilter));
+        });
+
+        filteredCards.forEach(card => {
+          projectContainer.appendChild(card);
+          card.style.display = 'block';
+        });
+      }
+
+      function resetFilters() {
+        document.getElementById('languageDropdown').value = '';
+        document.getElementById('typeDropdown').value = '';
+        document.getElementById('projectTypeDropdown').value = '';
+        filterProjects();
+      }
+
+      /************************
+       * Light/Dark Mode
+      *************************/
+      document.addEventListener('DOMContentLoaded', function() {
+        const toggleSwitch = document.querySelector('.switch input[type="checkbox"]');
+        const currentTheme = localStorage.getItem('theme');
+
+        if (currentTheme) {
+          document.body.classList.add(currentTheme);
+
+          if (currentTheme === 'light-mode') {
+            toggleSwitch.checked = true;
+          }
+        }
+
+        toggleSwitch.addEventListener('change', function(e) {
+          if (e.target.checked) {
+            document.body.classList.add('light-mode');
+            document.body.classList.remove('dark-mode');
+            localStorage.setItem('theme', 'light-mode');
+          } else {
+            document.body.classList.remove('light-mode');
+            document.body.classList.add('dark-mode');
+            localStorage.setItem('theme', 'dark-mode');
+          }
+        });
+
+        const hamburgerToggleSwitch = document.querySelector('.hamburger-menu .switch input[type="checkbox"]');
+        if (hamburgerToggleSwitch) {
+          hamburgerToggleSwitch.addEventListener('change', function(e) {
+            if (e.target.checked) {
+              document.body.classList.add('light-mode');
+              document.body.classList.remove('dark-mode');
+              localStorage.setItem('theme', 'light-mode');
+            } else {
+              document.body.classList.remove('light-mode');
+              document.body.classList.add('dark-mode');
+              localStorage.setItem('theme', 'dark-mode');
+            }
+          });
+
+          if (currentTheme === 'light-mode') {
+            hamburgerToggleSwitch.checked = true;
+          }
+        }
+      });
+
+
+      /************************
+       * Language Switch
+      *************************/
+      const translations = {
+  en: {
+    home: "HOME",
+    about: "ABOUT",
+    projects: "PROJECTS",
+    contact: "CONTACT",
+    cv: "CV",
+    subtitle: "Student in Computer Science",
+    whoAmI: "Who am I?",
+    welcomeMessage: "Welcome to my portfolio! Currently in the third year of a Computer Science degree, I am a young technology and programming enthusiast with an insatiable curiosity since childhood.",
+    wathIsThis: "This site is a showcase of my diversified skills, development initiatives I have led, and custom services I can offer. My adaptability and thirst for learning allow me to immerse myself in various projects with enthusiasm. Whether you are looking for a collaboration for an innovative project or expertise in development, I am open to any opportunity and warmly invite proposals.",
+    contactMe: "Contact me and together, let's turn ideas into tangible realities.",
+    mySkills: "My Skills",
+    myStats: "My Stats",
+    projectsTitle: "My Projects",
+    contactTitle: "Contact",
+    sendMessage: "SEND MESSAGE",
+    stages: "Internships",
+    projectsDone: "Projects Done",
+    contestsWon: "Contests Won",
+    workshops: "Workshops",
+    leaveMessage: "Leave me a message.",
+    phone: "Phone",
+    email: "Email",
+    address: "Avignon, France",
+    credit: "Made by",
+    view: "View",
+    filterLanguage: "All languages",
+    filterType: "All types",
+    filterProjectType: "All projects",
+    resetFilters: "Reset Filters",
+    namePlaceholder: "Name",
+    emailPlaceholder: "Email",
+    subjectPlaceholder: "Subject",
+    messagePlaceholder: "Message",
+    java: "Java",
+    cpp: "C++",
+    python: "Python",
+    htmlCssJs: "HTML/CSS/JS",
+    php: "PHP",
+    javaFx: "JavaFX",
+    sql: "SQL",
+    pgsql: "PostgreSQL",
+    plsql: "PL/SQL",
+    bash: "Bash",
+    assembly: "Assembly",
+    pascal: "Pascal",
+    web: "Web",
+    desktop: "Desktop",
+    terminal: "Terminal",
+    mobile: "Mobile",
+    personal: "Personal",
+    academic: "Academic"
+  },
+  fr: {
+    home: "ACCUEIL",
+    about: "À PROPOS",
+    projects: "PROJETS",
+    contact: "CONTACT",
+    cv: "CV",
+    subtitle: "Étudiant en Informatique",
+    whoAmI: "Qui suis-je ?",
+    welcomeMessage: "Bienvenue sur mon portfolio ! Actuellement en troisième année de Licence Informatique, je suis un jeune passionné de technologie et de programmation, fort d'une curiosité insatiable depuis mon enfance.",
+    wathIsThis: "Ce site est une vitrine de mes compétences diversifiées, des initiatives de développement que j'ai pilotées, et des services sur mesure que je peux offrir. Mon adaptabilité et ma soif d'apprentissage me permettent de m'immerger dans des projets variés avec enthousiasme. Que vous soyez à la recherche d'une collaboration pour un projet innovant ou d'une expertise en développement, je suis ouvert à toute opportunité et invite chaleureusement les propositions.",
+    contactMe: "Contactez-moi et ensemble, transformons les idées en réalités tangibles.",
+    mySkills: "Mes Compétences",
+    myStats: "Mes Statistiques",
+    projectsTitle: "Mes Projets",
+    contactTitle: "Contact",
+    sendMessage: "ENVOYER MESSAGE",
+    stages: "Stages",
+    projectsDone: "Projets Réalisés",
+    contestsWon: "Concours Gagnés",
+    workshops: "Ateliers",
+    leaveMessage: "Laissez-moi un message.",
+    phone: "Téléphone",
+    email: "Email",
+    address: "Avignon, France",
+    credit: "Réalisé par",
+    view: "Voir",
+    filterLanguage: "Tous les langages",
+    filterType: "Tous les types",
+    filterProjectType: "Tous les projets",
+    resetFilters: "Réinitialiser les filtres",
+    namePlaceholder: "Nom",
+    emailPlaceholder: "Email",
+    subjectPlaceholder: "Objet",
+    messagePlaceholder: "Message",
+    java: "Java",
+    cpp: "C++",
+    python: "Python",
+    htmlCssJs: "HTML/CSS/JS",
+    php: "PHP",
+    javaFx: "JavaFX",
+    sql: "SQL",
+    pgsql: "PostgreSQL",
+    plsql: "PL/SQL",
+    bash: "Bash",
+    assembly: "Assembleur",
+    pascal: "Pascal",
+    web: "Web",
+    desktop: "Bureau",
+    terminal: "Terminal",
+    mobile: "Mobile",
+    personal: "Personnel",
+    academic: "Académique"
+  }
+};
+
+
+
+      document.addEventListener('DOMContentLoaded', function() {
+        const langSwitch = document.querySelector('#check');
+        const currentLang = localStorage.getItem('language') || 'en';
+
+        // Function to translate the page
+        function translatePage(language) {
+          document.querySelectorAll('[data-translate]').forEach(el => {
+            const key = el.getAttribute('data-translate');
+            if (translations[language][key]) {
+              el.innerText = translations[language][key];
+            }
+          });
+
+          // Translate placeholders
+          document.querySelectorAll('[data-translate-placeholder]').forEach(el => {
+            const key = el.getAttribute('data-translate-placeholder');
+            if (translations[language][key]) {
+              el.setAttribute('placeholder', translations[language][key]);
+            }
+          });
+
+          // Translate options
+          document.querySelectorAll('option[data-translate]').forEach(option => {
+            const key = option.getAttribute('data-translate');
+            if (translations[language][key]) {
+              option.innerText = translations[language][key];
+            }
+          });
+        }
+
+        // Set initial language
+        translatePage(currentLang);
+        langSwitch.checked = currentLang === 'fr';
+
+        // Add event listener to switch
+        langSwitch.addEventListener('change', function() {
+          const language = this.checked ? 'fr' : 'en';
+          localStorage.setItem('language', language);
+          translatePage(language);
+        });
+      });
+
+    </script>
+
+  </body>
+</html>

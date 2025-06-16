@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Projet CERIcar - Application de Covoiturage</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Projet CERIcar - Application de Covoiturage</h1>
+    </div>
+
+    <div class="w3-container project-info">
+
+        <h3 class="project-title">Introduction</h3>
+        <p>CERIcar est une application web développée dans le cadre de l’UE Programmation Web à l’Université d’Avignon. Ce projet a été réalisé avec le framework <strong>Yii</strong>, en respectant une architecture <strong>MVC</strong> claire et organisée. Il vise à offrir une plateforme fonctionnelle pour la gestion de trajets de covoiturage, avec une interface moderne et interactive.</p>
+
+        <h3 class="project-title">Objectifs</h3>
+        <p>Le but principal était de concevoir une plateforme fluide et intuitive, où les utilisateurs peuvent proposer et réserver des trajets. L’utilisation d’<strong>AJAX</strong> nous a permis de gérer les requêtes sans rechargement de page, améliorant l’expérience utilisateur (connexion, inscription, recherche dynamique, réservation...).</p>
+
+        <h3 class="project-title">Architecture et Technologies</h3>
+        <ul>
+            <li>Framework <strong>Yii (PHP)</strong> : pour structurer le projet en MVC</li>
+            <li><strong>AJAX</strong> et JavaScript : pour dynamiser l’interface</li>
+            <li><strong>HTML/CSS</strong> : pour le rendu visuel responsive</li>
+            <li><strong>MySQL</strong> : pour la gestion des données (utilisateurs, trajets, réservations)</li>
+        </ul>
+
+        <h3 class="project-title">Fonctionnalités développées</h3>
+        <ul>
+            <li>Inscription et connexion sécurisée des utilisateurs</li>
+            <li>Ajout et modification de trajets par les conducteurs</li>
+            <li>Recherche de trajets avec ou sans correspondance</li>
+            <li>Réservation de trajets avec mise à jour automatique des places disponibles</li>
+            <li>Interface de gestion des trajets réservés et proposés (profil utilisateur)</li>
+        </ul>
+
+        <h3>Galerie d'Images</h3>
+        <div class="image-gallery w3-row">
+            <div class="w3-half w3-container w3-panel w3-border w3-round-xlarge">
+                <h3>Page d'accueil</h3>
+                <a href="#img1">
+                    <img src="../img/pages/cericar/c1.png" alt="Page d'accueil">
+                </a>
+                <p>Vue d’ensemble du site, avec lien vers les fonctionnalités principales.</p>
+            </div>
+            <div class="w3-half w3-container w3-panel w3-border w3-round-xlarge">
+                <h3>Page de connexion</h3>
+                <a href="#img2">
+                    <img src="../img/pages/cericar/c2.png" alt="Page de connexion">
+                </a>
+                <p>Connexion des utilisateurs via formulaire AJAX sécurisé.</p>
+
+                <h3>Page d'inscription</h3>
+                <a href="#img3">
+                    <img src="../img/pages/cericar/c3.png" alt="Page d'inscription">
+                </a>
+                <p>Création de compte avec validation côté serveur via Yii.</p>
+            </div>
+        </div>
+
+        <div class="image-gallery w3-row">
+            <div class="w3-half w3-container w3-panel w3-border w3-round-xlarge">
+                <h3>Proposer un voyage</h3>
+                <a href="#img4">
+                    <img src="../img/pages/cericar/c4.png" alt="Proposer un voyage">
+                </a>
+                <p>Formulaire pour conducteurs avec choix de la date, heure, destination et tarif.</p>
+            </div>
+            <div class="w3-half w3-container w3-panel w3-border w3-round-xlarge">
+                <h3>Recherche de voyage</h3>
+                <a href="#img5">
+                    <img src="../img/pages/cericar/c5.png" alt="Recherche de voyage">
+                </a>
+                <p>Interface AJAX de recherche filtrée avec suggestions automatiques.</p>
+            </div>
+        </div>
+
+        <div class="image-gallery w3-row">
+            <div class="w3-half w3-container w3-panel w3-border w3-round-xlarge">
+                <h3>Résultats de recherche</h3>
+                <a href="#img6">
+                    <img src="../img/pages/cericar/c6.png" alt="Résultats de recherche">
+                </a>
+                <p>Affichage des trajets disponibles, triés par pertinence ou par prix.</p>
+            </div>
+            <div class="w3-half w3-container w3-panel w3-border w3-round-xlarge">
+                <h3>Profil utilisateur</h3>
+                <a href="#img7">
+                    <img src="../img/pages/cericar/c7.png" alt="Profil utilisateur">
+                </a>
+                <p>Section de gestion des réservations et trajets proposés.</p>
+            </div>
+        </div>
+
+        <a href="../index.html" class="btn-back">Retour</a>
+    </div>
+
+    <!-- Lightbox Images -->
+    <div id="img1" class="lightbox"><a href="#" class="close">&times;</a><img src="../img/pages/cericar/c1.png"></div>
+    <div id="img2" class="lightbox"><a href="#" class="close">&times;</a><img src="../img/pages/cericar/c2.png"></div>
+    <div id="img3" class="lightbox"><a href="#" class="close">&times;</a><img src="../img/pages/cericar/c3.png"></div>
+    <div id="img4" class="lightbox"><a href="#" class="close">&times;</a><img src="../img/pages/cericar/c4.png"></div>
+    <div id="img5" class="lightbox"><a href="#" class="close">&times;</a><img src="../img/pages/cericar/c5.png"></div>
+    <div id="img6" class="lightbox"><a href="#" class="close">&times;</a><img src="../img/pages/cericar/c6.png"></div>
+    <div id="img7" class="lightbox"><a href="#" class="close">&times;</a><img src="../img/pages/cericar/c7.png"></div>
+
+    <script>
+        document.addEventListener('keydown', function(event) {
+            let currentLightbox = document.querySelector('.lightbox:target');
+            if (!currentLightbox) return;
+            let newTargetId;
+            switch (event.key) {
+                case "ArrowLeft":
+                    newTargetId = currentLightbox.previousElementSibling?.id;
+                    break;
+                case "ArrowRight":
+                    newTargetId = currentLightbox.nextElementSibling?.id;
+                    break;
+                case "Escape":
+                    currentLightbox.querySelector('.close').click();
+                    return;
+            }
+            if (newTargetId) {
+                window.location = '#' + newTargetId;
+            }
+        });
+
+        document.querySelectorAll('.close').forEach(closeBtn => {
+            closeBtn.addEventListener('click', function(event) {
+                event.preventDefault();
+                const lightbox = this.closest('.lightbox');
+                if (lightbox) {
+                    lightbox.style.display = 'none';
+                    history.pushState("", document.title, window.location.pathname + window.location.search);
+                }
+            });
+        });
+    </script>
+</body>
+
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f1f1f1;
+        margin: 0;
+        padding: 0;
+    }
+
+    .header {
+        background-color: #333;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .project-info {
+        background-color: white;
+        margin: 20px;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .project-title {
+        color: #333;
+        margin-bottom: 15px;
+    }
+
+    .btn-back {
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+    .btn-back:hover {
+        background-color: #555;
+    }
+
+    .image-gallery {
+        margin-top: 20px;
+    }
+
+    .image-gallery img {
+        width: 100%;
+        padding: 5px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .lightbox {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        align-items: center;
+        justify-content: center;
+    }
+
+    .lightbox img {
+        max-width: 90%;
+        max-height: 90%;
+        margin: auto;
+    }
+
+    .lightbox:target {
+        display: flex;
+    }
+
+    .close {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+    }
+</style>
+</html>

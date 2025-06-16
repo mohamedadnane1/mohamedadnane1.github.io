@@ -1,0 +1,1277 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: black;
+  color: white; /* pour que le texte soit visible sur un fond noir */
+}
+
+.w3-row-padding img {
+  margin-bottom: 12px;
+}
+
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {
+  width: 120px;
+  background: #222;
+}
+
+.mode-switch {
+  position: absolute;
+  bottom: 10px; /* Ajustez cette valeur selon vos besoins */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  /* marge gauche pour centrer le bouton */
+  margin-left: 30px;
+}
+
+#main {
+  margin-left: 120px;
+  background-color: black; /* ajout pour changer le fond de #main */
+}
+
+@media only screen and (max-width: 600px) {
+  #main {
+    margin-left: 0;
+  }
+}
+
+.html,
+.css,
+.js {
+  background: radial-gradient(closest-side, black 79%, white 80% 100%),
+    conic-gradient(white calc(var(--progress-value) * 1%), black 0 100%);
+  border: 2px solid white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  color: white;
+}
+
+/*******************************************************
+Circle Progress Bar
+*******************************************************/
+.circles {
+  display: flex;
+  justify-content: space-between; /* ou space-around */
+  width: 90%; /* ajustez selon vos besoins */
+  margin: 0 auto; /* centre le conteneur sur la page */
+}
+
+@property --progress-value {
+  syntax: "<integer>";
+  inherits: false;
+  initial-value: 0;
+}
+
+@keyframes html-progress {
+  to {
+    --progress-value: 99;
+  }
+}
+
+@keyframes css-progress {
+  to {
+    --progress-value: 95;
+  }
+}
+
+@keyframes js-progress {
+  to {
+    --progress-value: 90;
+  }
+}
+
+@keyframes php-progress {
+  to {
+    --progress-value: 75;
+  }
+}
+
+@keyframes sql-progress {
+  to {
+    --progress-value: 45;
+  }
+}
+
+@keyframes python-progress {
+  to {
+    --progress-value: 90;
+  }
+}
+
+@keyframes java-progress {
+  to {
+    --progress-value: 79;
+  }
+}
+
+@keyframes cpp-progress {
+  to {
+    --progress-value: 70;
+  }
+}
+
+@keyframes c-progress {
+  to {
+    --progress-value: 50;
+  }
+}
+
+.progress-bar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+
+  /* to center the percentage value */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-bar::before {
+  counter-reset: percentage var(--progress-value);
+  content: counter(percentage) "%";
+  color: white;
+}
+
+.html {
+  background: radial-gradient(
+      closest-side,
+      black 79%,
+      transparent 80% 100%,
+      black 0
+    ),
+    conic-gradient(white calc(var(--progress-value) * 1%), black 0);
+  animation: html-progress 2s 1 forwards;
+}
+
+.html::before {
+  animation: html-progress 2s 1 forwards;
+}
+
+.css {
+  background: radial-gradient(
+      closest-side,
+      black 79%,
+      transparent 80% 100%,
+      black 0
+    ),
+    conic-gradient(white calc(var(--progress-value) * 1%), black 0);
+  animation: css-progress 2s 1 forwards;
+}
+
+.css::before {
+  animation: css-progress 2s 1 forwards;
+}
+
+.js {
+  background: radial-gradient(
+      closest-side,
+      black 79%,
+      transparent 80% 100%,
+      black 0
+    ),
+    conic-gradient(white calc(var(--progress-value) * 1%), black 0);
+  animation: js-progress 2s 1 forwards;
+}
+
+.js::before {
+  animation: js-progress 2s 1 forwards;
+}
+
+.php {
+  background: radial-gradient(
+      closest-side,
+      black 79%,
+      transparent 80% 100%,
+      black 0
+    ),
+    conic-gradient(white calc(var(--progress-value) * 1%), black 0);
+  animation: php-progress 2s 1 forwards;
+}
+
+.php::before {
+  animation: php-progress 2s 1 forwards;
+}
+
+.sql {
+  background: radial-gradient(
+      closest-side,
+      black 79%,
+      transparent 80% 100%,
+      black 0
+    ),
+    conic-gradient(white calc(var(--progress-value) * 1%), black 0);
+  animation: sql-progress 2s 1 forwards;
+}
+
+.sql::before {
+  animation: sql-progress 2s 1 forwards;
+}
+
+.python {
+  background: radial-gradient(
+      closest-side,
+      black 79%,
+      transparent 80% 100%,
+      black 0
+    ),
+    conic-gradient(white calc(var(--progress-value) * 1%), black 0);
+  animation: python-progress 2s 1 forwards;
+}
+
+.python::before {
+  animation: python-progress 2s 1 forwards;
+}
+
+.java {
+  background: radial-gradient(
+      closest-side,
+      black 79%,
+      transparent 80% 100%,
+      black 0
+    ),
+    conic-gradient(white calc(var(--progress-value) * 1%), black 0);
+  animation: java-progress 2s 1 forwards;
+}
+
+.java::before {
+  animation: java-progress 2s 1 forwards;
+}
+
+.cpp {
+  background: radial-gradient(
+      closest-side,
+      black 79%,
+      transparent 80% 100%,
+      black 0
+    ),
+    conic-gradient(white calc(var(--progress-value) * 1%), black 0);
+  animation: cpp-progress 2s 1 forwards;
+}
+
+.cpp::before {
+  animation: cpp-progress 2s 1 forwards;
+}
+
+.c {
+  background: radial-gradient(
+      closest-side,
+      black 79%,
+      transparent 80% 100%,
+      black 0
+    ),
+    conic-gradient(white calc(var(--progress-value) * 1%), black 0);
+  animation: c-progress 2s 1 forwards;
+}
+
+.c::before {
+  animation: c-progress 2s 1 forwards;
+}
+
+/* ------------------------------*/
+
+h2 {
+  text-align: center;
+}
+
+progress {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.faicons {
+  font-size: 2em; /* Ajout de cette ligne pour une taille fixe */
+  width: 2em; /* Ajout de cette ligne pour une largeur fixe */
+  height: 2em; /* Ajout de cette ligne pour une hauteur fixe */
+  line-height: 2em; /* Pour centrer verticalement l'icône */
+  text-align: center; /* Pour centrer horizontalement l'icône */
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.fabicons {
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 2em; /* Ajout de cette ligne pour une largeur fixe */
+  height: 2em; /* Ajout de cette ligne pour une hauteur fixe */
+  line-height: 2em; /* Pour centrer verticalement l'icône */
+  text-align: center; /* Pour centrer horizontalement l'icône */
+}
+
+
+a, button {
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover, button:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.5s forwards;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.card {
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+}
+
+.card img {
+  transition: transform 0.3s ease;
+}
+
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.faicons:hover, .fabicons:hover {
+  animation: bounce 1s;
+}
+
+
+h1, h2, h3, a, button {
+  position: relative;
+  display: inline-block;
+}
+
+h1::after, h2::after, h3::after, a::after, button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+button:hover::after  {
+  width: 100%;
+}
+ 
+
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid white; /* pour ajouter un contour blanc */
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3);
+}
+
+
+.text-animate {
+  display: inline-block;
+  position: relative;
+}
+
+.text-animate::before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background-color: white;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.text-animate:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+
+.parallax {
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.parallax:hover {
+  background-position: center;
+}
+
+.faicons,
+.fabicons {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.faicons:hover,
+.fabicons:hover {
+  transform: translateY(-10px) rotate(10deg);
+}
+
+
+/* ------------------------------*/
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.project-card {
+  width: calc(33.333% - 16px);
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .project-card {
+    width: calc(50% - 16px); 
+  }
+}
+@media (max-width: 480px) {
+  .project-card {
+    width: 100%; 
+  }
+}
+
+/* ------------------------------*/
+.filter-dropdown {
+  background-color: black;
+  color: white;
+  padding: 8px 16px;
+  border: white 1px solid;
+  border-radius: 4px;
+  width: 100%; 
+  display: inline-block; 
+  margin-right: 9px;
+}
+
+.renButton {
+  background-color: black;
+  color: white;
+  padding: 8px 16px;
+  border: white 1px solid;
+  border-radius: 4px;
+  width: 100%; 
+  display: inline-block; 
+  margin-right: 9px;
+}
+
+
+#noProjectsMessage {
+  display: none; 
+  margin-top: 20px;
+  color: white; 
+  text-align: center;
+  font-size: 1.2em; 
+  padding: 10px; 
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 5px; 
+}
+
+
+/* ------------------------------
+Button mode sombre
+------------------------------ */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(75, 73, 74);
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.3em;
+  bottom: 0.3em;
+  background-color: black;
+  box-shadow: inset 8px -4px 0 0 white;
+  transition: 0.4s;
+}
+
+.switch input:checked + .slider {
+  background-color: #2196f3;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(1.5em);
+  background-color: yellow;
+  box-shadow: none;
+}
+
+/****************************************************
+ *  Light Mode
+ ****************************************************/
+.light-mode {
+  background-color: white;
+  color: black;
+}
+
+.light-mode body, .light-mode #main {
+  background-color: white;
+  color: black;
+}
+
+.light-mode h1,
+.light-mode h2,
+.light-mode h3,
+.light-mode h4,
+.light-mode h5,
+.light-mode h6,
+.light-mode p,
+.light-mode span {
+  color: black;
+}
+
+.light-mode .w3-bar,
+.light-mode .w3-sidebar {
+  background: #f1f1f1;
+}
+
+.light-mode .w3-bar .fa,
+.light-mode .w3-sidebar .fa,
+.light-mode .w3-bar .faicons,
+.light-mode .w3-sidebar .faicons {
+  color: black;
+}
+
+.light-mode .w3-bar .faicons,
+.light-mode .w3-sidebar .faicons {
+  color: white;
+}
+
+.light-mode .w3-bar .w3-bar-item.w3-black,
+.light-mode .w3-sidebar .w3-bar-item.w3-black {
+  background-color: black;
+  color: white;
+}
+
+.light-mode .progress-bar {
+  border: 2px solid black;
+}
+
+.light-mode .faicons,
+.light-mode .fabicons {
+  color: black;
+}
+
+.light-mode .filter-dropdown,
+.light-mode .renButton {
+  background-color: white;
+  color: black;
+  border: black 1px solid;
+}
+
+.light-mode #noProjectsMessage {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.light-mode .switch .slider {
+  background-color: #ccc;
+}
+
+.light-mode .switch .slider:before {
+  background-color: yellow;
+  box-shadow: none;
+}
+
+.light-mode .switch input:checked + .slider {
+  background-color: #2196f3;
+}
+
+.light-mode .switch input:checked + .slider:before {
+  background-color: black;
+}
+
+.light-mode .card {
+  border: 1px solid black;
+}
+
+.light-mode .card-body {
+  background-color: #f9f9f9;
+  color: black;
+}
+
+.light-mode .project-card .card-title,
+.light-mode .project-card .card-text,
+.light-mode .w3-container .w3-quarter span {
+  color: black;
+}
+
+.light-mode .w3-row.w3-black {
+  background-color: white;
+  color: black;
+}
+
+.light-mode header.w3-container.w3-black {
+  background-color: white;
+}
+
+.light-mode .w3-content {
+  background-color: white;
+}
+
+.light-mode .w3-section {
+  color: black;
+}
+
+.light-mode .fa-map-marker,
+.light-mode .fa-phone,
+.light-mode .fa-envelope {
+  color: black;
+}
+
+
+.light-mode .w3-sidebar,
+.light-mode .w3-bar {
+  background: #f1f1f1;
+}
+
+.light-mode .w3-sidebar .fa,
+.light-mode .w3-bar .fa,
+.light-mode .w3-sidebar .faicons,
+.light-mode .w3-bar .faicons {
+  color: black;
+}
+
+.dark-mode .w3-sidebar,
+.dark-mode .w3-bar {
+  background: #222;
+}
+
+.dark-mode .w3-sidebar .fa,
+.dark-mode .w3-bar .fa,
+.dark-mode .w3-sidebar .faicons,
+.dark-mode .w3-bar .faicons {
+  color: white;
+}
+
+button.btn-primary {
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+}
+
+.light-mode button.btn-primary {
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+}
+
+.btn-primary {
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+}
+
+.light-mode .btn-primary {
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+}
+
+button.btn-primary {
+  border: 1px solid white !important;
+  background-color: black !important;
+  color: white !important;
+}
+
+.light-mode button.btn-primary {
+  border: 1px solid black !important;
+  background-color: white !important;
+  color: black !important;
+}
+
+.btn-primary {
+  border: 1px solid white !important;
+  background-color: black !important;
+  color: white !important;
+}
+
+.light-mode .btn-primary {
+  border: 1px solid black !important;
+  background-color: white !important;
+  color: black !important;
+}
+
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid white; 
+  background-color: black; 
+  color: white; 
+}
+
+.light-mode .card {
+  border: 1px solid black;
+  background-color: white;
+  color: black; 
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3);
+}
+
+.card-body {
+  background-color: black;
+  color: white;
+}
+
+.light-mode .card-body {
+  background-color: white;
+  color: black; 
+}
+
+.card-body h4.card-title,
+.card-body p.card-text,
+.card-body p {
+  color: white;
+}
+
+.light-mode .card-body h4.card-title,
+.light-mode .card-body p.card-text,
+.light-mode .card-body p {
+  color: black;
+}
+
+.btn-primary {
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+}
+
+.light-mode .btn-primary {
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+}
+
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+}
+
+.light-mode .card {
+  border: 1px solid black;
+  background-color: white;
+  color: black; 
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3);
+}
+
+.card-body {
+  background-color: black; 
+  color: white;
+}
+
+.light-mode .card-body {
+  background-color: white; 
+  color: black;
+}
+
+.card-body h4.card-title,
+.card-body p.card-text,
+.card-body p,
+.card-body a.btn-primary {
+  color: white !important;
+}
+
+.light-mode .card-body h4.card-title,
+.light-mode .card-body p.card-text,
+.light-mode .card-body p,
+.light-mode .card-body a.btn-primary {
+  color: black !important; /* Texte noir en mode jour */
+}
+
+.card-body .w3-text-black {
+  color: white !important; 
+}
+
+.light-mode .card-body .w3-text-black {
+  color: black !important; 
+}
+
+.btn-primary {
+  border: 1px solid white; 
+  background-color: black; 
+  color: white; 
+}
+
+.light-mode .btn-primary {
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: white;
+}
+
+.light-mode hr {
+  background-color: black;
+}
+
+h2.section-title,
+h3.section-title {
+  color: white; 
+}
+
+.light-mode h2.section-title,
+.light-mode h3.section-title {
+  color: black;
+}
+
+.card-body .w3-text-black {
+  color: white !important; 
+}
+
+.light-mode .card-body .w3-text-black {
+  color: black !important;
+}
+
+.btn-primary {
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+}
+
+.light-mode .btn-primary {
+  border: 1px solid black; 
+  background-color: white; 
+  color: black;
+}
+
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid white; 
+  background-color: black; 
+  color: white; 
+}
+
+.light-mode .card {
+  border: 1px solid black; 
+  background-color: white;
+  color: black;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3);
+}
+
+.card-body {
+  background-color: black;
+  color: white; 
+}
+
+.light-mode .card-body {
+  background-color: white;
+  color: black; 
+}
+
+.card-body h4.card-title,
+.card-body p.card-text,
+.card-body p,
+.card-body a.btn-primary {
+  color: white !important; 
+}
+
+.light-mode .card-body h4.card-title,
+.light-mode .card-body p.card-text,
+.light-mode .card-body p,
+.light-mode .card-body a.btn-primary {
+  color: black !important;
+}
+
+.w3-input {
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  border-radius: 8px;
+}
+
+.light-mode .w3-input {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  border-radius: 8px;
+}
+
+.w3-input {
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  border-radius: 8px;
+}
+
+.light-mode .w3-input {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  border-radius: 8px; 
+}
+
+.w3-button.w3-light-grey {
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  border-radius: 8px;
+}
+
+.light-mode .w3-button.w3-light-grey {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  border-radius: 8px; 
+}
+
+/*********************************************************
+  Switches Container 
+*********************************************************/
+.switches-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: 10px; 
+  width: 100%; 
+}
+
+.switch {
+  font-size: 17px;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+  margin-bottom: 20px; 
+  display: flex;
+  justify-content: center;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(75, 73, 74);
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.3em;
+  bottom: 0.3em;
+  background-color: black;
+  box-shadow: inset 8px -4px 0 0 white;
+  transition: 0.4s;
+}
+
+.switch input:checked + .slider {
+  background-color: #2196f3;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(1.5em);
+  background-color: yellow;
+  box-shadow: none;
+}
+
+.language-switch-container  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* Ensure the switch is centered */
+}
+
+.switch
+{
+  align-items: center;
+  justify-content: center;
+  margin-right: 40px; /* Space between the two switches */
+}
+
+.toggle {
+  width: 30px;
+  height: 60px;
+  background-color: hsl(0, 0%, 80%);
+  border-radius: 1.7rem;
+  padding: .25rem 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  transition: background-color 300ms 300ms;
+  margin-right: 10px; /* Space between toggle and text */
+}
+
+.toggle__circle {
+  width: 20px;
+  height: 20px;
+  background-color: hsl(0, 0%, 95%);
+  border-radius: 50%;
+  margin-top: calc(60px - (.25rem * 2) - 20px);
+  transition: margin 500ms ease-in-out;
+}
+
+.toggle-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  font-weight: bold; 
+  font-size: 1.2em; 
+}
+
+#check:checked + .toggle > .toggle__circle {
+  margin-top: 0;
+}
+
+#check:checked + .toggle {
+  background-color: #41a63c;
+}
+
+.w3-sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding-bottom: 100px; 
+}
+
+.w3-bar-block {
+  flex-grow: 1; 
+  overflow-y: auto; 
+  padding-bottom: 100px;
+}
+
+.w3-bar-item {
+  margin-bottom: 70px;
+  padding: 8px 16px; 
+}
+
+/****************************************************
+ *  Navigation petit écran
+ ****************************************************/
+ .hamburger {
+  font-size: 36px; 
+  font-weight: bold; 
+  color: white;
+  display: inline-block; 
+  margin: 10px; 
+  text-align: left; 
+}
+
+.hamburger-menu {
+  display: none; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+}
+
+.hamburger-menu.active {
+  display: flex; 
+}
+
+.hamburger-menu .switches-container {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center; 
+  gap: 20px; 
+}
+
+.hamburger-menu a {
+  font-size: 24px;
+  color: white;
+  margin: 15px 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
+.hamburger-menu .close-btn {
+  font-size: 36px; 
+  color: white;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.light-mode .hamburger-menu .close-btn {
+  color: black; 
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .w3-sidebar, .w3-top {
+    display: none;
+  }
+
+  #main {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 769px) {
+  .hamburger-menu {
+    display: none;
+  }
+}
+
+.light-mode .hamburger {
+  color: black;
+}
+
+.hamburger-menu {
+  background-color: black; 
+}
+
+.light-mode .hamburger-menu {
+  align-items: center;
+  background-color: white;
+}
+
+.hamburger-menu a {
+  color: white; 
+}
+
+.light-mode .hamburger-menu a {
+  color: black;
+}
+
+.hamburger-bar {
+  background-color: black;
+  color: white;
+  text-align: right; 
+  padding: 10px; 
+}
+
+.light-mode .hamburger-bar {
+  background-color: white;
+  color: black;
+  text-align: right;
+  padding: 10px; 
+}
+
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: none;
+  }
+}

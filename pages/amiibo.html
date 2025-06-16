@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Projet Amiibo Quiz</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .project-info {
+            background-color: white;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .project-title {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .btn-back {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .btn-back:hover {
+            background-color: #555;
+        }
+        .image-gallery img {
+            width: 100%;
+            padding: 5px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .button-icon {
+            display: flex;
+            border: 3px #fff solid;
+            width: fit-content;
+            height: fit-content;
+            cursor: pointer;
+        }
+        .icon {
+            background-color: #fff;
+            padding: 10px 10px 5px 10px;
+        }
+        .icon svg {
+            width: 25px;
+            height: 25px;
+        }
+        .cube {
+            transition: all 0.4s;
+            transform-style: preserve-3d;
+            width: 200px;
+            height: 20px;
+        }
+        .button-icon:hover {
+            border-color: #ff98a2;
+        }
+        .button-icon:hover .cube {
+            transform: rotateX(90deg);
+        }
+        .side {
+            position: absolute;
+            height: 47px;
+            width: 200px;
+            display: flex;
+            font-size: 0.8em;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: bold;
+        }
+        .top {
+            background: #ff98a2;
+            color: #fff;
+            transform: rotateX(-90deg) translate3d(0, 13.5px, 2em);
+        }
+        .front {
+            background: #222229;
+            color: #fff;
+            transform: translate3d(0, 0, 1em);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Projet Amiibo Quiz - Application Mobile Android</h1>
+    </div>
+
+    <div class="w3-container project-info">
+        <div class="w3-row">
+            <div class="w3-third w3-container"></div>
+            <div class="w3-third w3-container w3-center">
+                <a href="https://github.com/youssefb14/Amiibo" target="_blank" class="button-link">
+                    <div class="button-icon">
+                        <div class="icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 0.297C5.37 0.297 0 5.67 0 12.297C0 17.6 3.438 22.097 8.205 23.682..." fill="#222229"/>
+                            </svg>
+                        </div>
+                        <div class="cube">
+                            <span class="side front">VOIR CODE</span>
+                            <span class="side top">Code sur Github</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="w3-third w3-container"></div>
+        </div>
+
+        <h3 class="project-title">Présentation du Projet</h3>
+        <p>Développée dans le cadre du cours "Application Mobile et Ergonomie" à l'Université d'Avignon, Amiibo Quiz est une application mobile Android développée en Kotlin. Elle permet de découvrir et tester ses connaissances sur les personnages Amiibo à travers un quiz interactif.</p>
+
+        <h3 class="project-title">Fonctionnalités principales</h3>
+        <ul>
+            <li>Connexion à l’API publique <code>https://www.amiiboapi.com/</code> pour récupérer les données en temps réel.</li>
+            <li>Choix des séries de jeu pour filtrer les Amiibos souhaités.</li>
+            <li>Stockage local des favoris avec Realm (ORM local).</li>
+            <li>Affichage dynamique des personnages avec images (Picasso) et nom dans un RecyclerView.</li>
+            <li>Jeu de quiz avec score, indice, sélection parmi plusieurs réponses et gestion des interactions.</li>
+            <li>Interface fluide avec ViewBinding, menu, navigation entre activités, et design ergonomique.</li>
+        </ul>
+
+        <h3 class="project-title">Technologies utilisées</h3>
+        <p><strong>Kotlin</strong>, Android Studio, API REST avec Retrofit, <strong>Realm Java SDK</strong>, <strong>ViewBinding</strong>, <strong>Picasso</strong>, Architecture MVC, RecyclerView, Intent, Menu, Swipe Gesture, etc.</p>
+
+        <h3 class="project-title">Galerie d'Images</h3>
+        <div class="w3-row image-gallery">
+            <div class="w3-half w3-container w3-panel w3-border w3-round-xlarge">
+                <h4>Choix des séries Amiibo</h4>
+                <img src="../img/pages/amiibo/series.png" alt="Choix des séries">
+            </div>
+            <div class="w3-half w3-container w3-panel w3-border w3-round-xlarge">
+                <h4>Affichage des Amiibo</h4>
+                <img src="../img/pages/amiibo/amiibo_list.png" alt="Liste des Amiibo">
+            </div>
+        </div>
+
+        <div class="w3-row image-gallery">
+            <div class="w3-half w3-container w3-panel w3-border w3-round-xlarge">
+                <h4>Carte d'un Amiibo</h4>
+                <img src="../img/pages/amiibo/card.png" alt="Carte Amiibo">
+            </div>
+            <div class="w3-half w3-container w3-panel w3-border w3-round-xlarge">
+                <h4>Écran de Quiz</h4>
+                <img src="../img/pages/amiibo/quiz.png" alt="Quiz Amiibo">
+            </div>
+        </div>
+
+        <h3 class="project-title">Téléchargement du Rapport</h3>
+        <p>
+            <a href="../data/projetamiboo-2.pdf" class="btn-back" download>
+                📥 Télécharger le rapport PDF du projet
+            </a>
+        </p>
+
+        <a href="../index.html" class="btn-back">Retour</a>
+    </div>
+
+</body>
+</html>

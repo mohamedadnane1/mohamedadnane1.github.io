@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>CV - Adnane Mohamed</title>
+  <style>
+    html, body {
+      font-family: "Segoe UI", "Roboto", sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 21cm;
+      margin: auto;
+      padding: 2cm;
+      box-sizing: border-box;
+      background-color: #ffffff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    h1 {
+      font-size: 32px;
+      text-align: center;
+      color: #1a237e;
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      color: #1565c0;
+      border-bottom: 2px solid #1565c0;
+      padding-bottom: 3px;
+    }
+
+    p, li {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    ul {
+      margin-top: 5px;
+      margin-bottom: 15px;
+      padding-left: 20px;
+    }
+
+    .info {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .info p {
+      margin: 3px 0;
+      color: #444;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+
+    .competences span,
+    .interets span {
+      display: inline-block;
+      padding: 5px 10px;
+      margin: 4px;
+      background-color: #e3f2fd;
+      color: #0d47a1;
+      border-radius: 5px;
+      font-size: 13px;
+    }
+
+    .highlight {
+      background-color: #e8f5e9;
+      padding: 8px;
+      border-left: 4px solid #43a047;
+      margin-bottom: 10px;
+    }
+
+    .download-link {
+      display: inline-block;
+      background-color: #1565c0;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .download-link:hover {
+      background-color: #0d47a1;
+    }
+
+    @media print {
+      .download-link {
+        display: none;
+      }
+
+      body {
+        width: auto;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Lien de téléchargement du CV PDF -->
+  <a href="../data/AdnaneMohamed.pdf" download class="download-link">
+    📥 Télécharger mon CV en PDF
+  </a>
+
+  <h1>Adnane Mohamed</h1>
+
+  <div class="info">
+    <p><strong>Téléphone :</strong> 07 67 35 16 49</p>
+    <p><strong>Email :</strong> mohamedadnanelycee@gmail.com</p>
+    <p><strong>Adresse :</strong> 36 rue de la Sorgue, Avignon 84000</p>
+  </div>
+
+  <h2>Licence 3 Informatique</h2>
+  <div class="section">
+    <p>Passionné par les technologies et le développement logiciel, j'ai développé des compétences en analyse,
+      programmation et gestion de projets. Rigoureux, autonome et doté d'un bon esprit d'équipe, je m'adapte
+      rapidement aux défis et trouve des solutions efficaces. Mon sens de l'organisation et ma capacité à
+      résoudre des problèmes me permettent de mener à bien mes missions et d'apprendre rapidement.</p>
+  </div>
+
+  <h2>Formation</h2>
+  <div class="section">
+    <div class="highlight">
+      <strong>Licence Informatique</strong> – Université d’Avignon<br>
+      2022 – 2025 (en cours)
+    </div>
+    <div class="highlight">
+      <strong>Baccalauréat Scientifique</strong> – Lycée Théodore Aubanel, 2019<br>
+      Spécialités : Mathématiques, Physique, SVT – Mention Bien
+    </div>
+  </div>
+
+  <h2>Projets personnels</h2>
+  <div class="section">
+    <ul>
+      <li><strong>Planificateur de Tâches Intelligent (Python)</strong> :
+        Conception d'une application de planification de tâches intégrant un algorithme
+d'ordonnancement pour optimiser la gestion du temps et des priorités. Implémentation d'une
+interface web avec Flask et stockage des tâches dans une base de données SQLite
+      </li>
+      <li><strong>Solveur de labyrinthes (Python)</strong> :
+        Développement d'un algorithme de résolution de labyrinthes en Python avec une gestion
+optimisée des parcour
+      </li>
+      
+    </ul>
+  </div>
+
+  <h2>Projets académiques</h2>
+  <div class="section">
+    <ul>
+      <li><strong>Développement Web avec Yii</strong> :
+        Conception et développement d'une application web de covoiturage avec le framework Yii :
+implémentation d'Ajax pour optimiser l'interactivité et réduire les rechargements de page
+      </li>
+      <li><strong>Jeu Wordle en Java</strong> :
+        Conception et implémentation d'une version du jeu Wordle en Java, incluant une interface
+        graphique intuitive avec JavaFX, gestion des interactions utilisateur et logique de jeu dynamique
+      </li>
+    </ul>
+  </div>
+
+  <h2>Langues</h2>
+  <div class="section">
+    <p><strong>Français :</strong> Langue natale<br>
+       <strong>Anglais :</strong> Niveau B2</p>
+  </div>
+
+  <h2>Compétences techniques</h2>
+  <div class="section competences">
+    <span>Python</span>
+    <span>R</span>
+    <span>C++</span>
+    <span>Java</span>
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>MySQL</span>
+    <span>Bash</span>
+    <span>Git</span>
+  </div>
+  <p>
+    Programmation des systèmes d'exploitation, Internet et services réseaux, Modélisation objet (UML),
+    Développement web (Yii, AJAX), IA, mobile, sécurité, optimisation, analyse de données, etc.
+  </p>
+
+  <h2>Centres d’intérêt</h2>
+  <div class="section interets">
+    <span>Développement web</span>
+    <span>Football</span>
+    <span>Randonnée</span>
+    <span>Photographie</span>
+    <span>Montage vidéo</span>
+  </div>
+
+</body>
+</html>
