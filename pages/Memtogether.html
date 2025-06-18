@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Projet MemTogether</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- Style custom identique à la page Wordle  -->
+    <style>
+        body{font-family:'Arial',sans-serif;background:#f1f1f1;margin:0;padding:0;}
+        .header{background:#333;color:#fff;text-align:center;padding:10px 0;}
+        .project-info{background:#fff;margin:20px;padding:20px;border-radius:5px;
+                      box-shadow:0 2px 5px rgba(0,0,0,.2);}
+        .project-title{color:#333;margin-bottom:15px;}
+        .btn-back{background:#333;color:#fff;padding:10px 20px;text-decoration:none;
+                  border-radius:5px;display:inline-block;margin-top:20px;}
+        .btn-back:hover{background:#555;}
+        .image-gallery{margin-top:20px;}
+        .image-gallery img{width:100%;padding:5px;border-radius:5px;
+                           box-shadow:0 2px 5px rgba(0,0,0,.1);}
+        /* Bouton effet cube (Git) */
+        .button-icon{display:flex;border:3px #fff solid;width:fit-content;height:fit-content;cursor:pointer;}
+        .icon{background:#fff;padding:10px 10px 5px;}
+        .icon svg{width:25px;height:25px;}
+        .cube{transition:all .4s;transform-style:preserve-3d;width:200px;height:20px;}
+        .button-icon:hover{border-color:#ff98a2;}
+        .button-icon:hover .cube{transform:rotateX(90deg);}
+        .side{position:absolute;height:47px;width:200px;display:flex;font-size:.8em;justify-content:center;
+              align-items:center;text-transform:uppercase;letter-spacing:.5px;font-weight:bold;}
+        .top{background:#ff98a2;color:#fff;transform:rotateX(-90deg) translate3d(0,13.5px,2em);}
+        .front{background:#222229;color:#fff;transform:translate3d(0,0,1em);}
+        /* Lightbox */
+        .lightbox{display:none;position:fixed;z-index:1000;left:0;top:0;width:100%;height:100%;
+                  background:rgba(0,0,0,.8);align-items:center;justify-content:center;}
+        .lightbox img{max-width:90%;max-height:90%;margin:auto;}
+        .lightbox:target{display:flex;}
+        .close{position:absolute;top:20px;right:40px;font-size:30px;color:#fff;cursor:pointer;}
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Projet MemTogether</h1>
+    </div>
+
+    <div class="w3-container project-info">
+        <!-- Lien vers ton rapport PDF -->
+        <a href="../data/Rapport_MemTogether.pdf" class="download-link" download>
+            📥 Télécharger le rapport PDF
+        </a>
+
+        <!-- Bouton vers le dépôt Git -->
+        <div class="w3-row">
+            <div class="w3-third w3-container"></div>
+            <div class="w3-third w3-container w3-center">
+                <a href="https://github.com/aymane8414/MemTogether" target="_blank" class="button-link">
+                    <div class="button-icon">
+                        <div class="icon">
+                            <!-- Icône GitHub -->
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 .3C5.37.3 0 5.67 0 12.3c0 5.3 3.44 9.79 8.21 11.37.6.11.82-.26.82-.58 0-.29-.01-1.05-.01-2.06-3.34.73-4.05-1.61-4.05-1.61-.55-1.39-1.34-1.77-1.34-1.77-1.09-.75.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49.99.11-.78.42-1.3.76-1.6-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 013.01-.4c1.02.01 2.05.14 3.01.4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.25 2.87.12 3.17.77.84 1.23 1.92 1.23 3.22 0 4.61-2.82 5.62-5.5 5.92.43.37.81 1.09.81 2.2 0 1.59-.02 2.87-.02 3.26 0 .32.21.7.82.58C20.57 22.09 24 17.6 24 12.3 24 5.67 18.63.3 12 .3z"/>
+                            </svg>
+                        </div>
+                        <div class="cube">
+                            <span class="side front">VOIR CODE</span>
+                            <span class="side top">Repo GitHub</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="w3-third w3-container"></div>
+        </div>
+
+        <!-- Sections descriptives -->
+        <h3 class="project-title">Introduction</h3>
+        <p>MemTogether est une plateforme web collaborative qui permet à plusieurs utilisateurs de regarder en
+           synchronisation des photos ou des vidéos YouTube, d’échanger via un chat temps réel et de réagir
+           instantanément, le tout dans une interface responsive et conviviale.</p>
+
+        <h3>Fonctionnalités clés</h3>
+        <ul class="w3-ul">
+            <li>Création et gestion de salons (rooms) avec mot de passe optionnel</li>
+            <li>Visionnage synchronisé de photos ou de vidéos YouTube via WebSockets</li>
+            <li>Chat texte temps réel et réactions par émojis visibles par tous</li>
+            <li>File d’attente multimédia : ajout, sélection et suppression d’images</li>
+            <li>Modération : transfert automatique de la propriété si le créateur quitte la room</li>
+            <li>Filtrage de contenus inappropriés via API externe</li>
+            <li>Mode invité (spectateur) avec accès limité mais chat & réactions</li>
+        </ul>
+
+        <h3 class="project-title">Architecture</h3>
+        <p>L’application suit une architecture Django + Django Channels pour le backend temps réel,
+           Bootstrap et JavaScript pour le frontend responsive, et SQLite pour la base de données.
+           Cloudinary stocke les images tandis que SimplePeer gère le streaming caméra du modérateur.</p>
+
+        <!-- Galerie d'images : à insérer ici si besoin -->
+       
+        <!-- Navigation clavier dans la lightbox + fermeture -->
+        <script>
+            document.addEventListener('keydown', evt=>{
+                const lb=document.querySelector('.lightbox:target');if(!lb)return;
+                let id;switch(evt.key){
+                    case'ArrowLeft':id=lb.previousElementSibling?.id;break;
+                    case'ArrowRight':id=lb.nextElementSibling?.id;break;
+                    case'Escape':lb.querySelector('.close').click();return;}
+                if(id)window.location='#'+id;
+            });
+            document.querySelectorAll('.close').forEach(btn=>{
+                btn.addEventListener('click',e=>{
+                    e.preventDefault();
+                    const lb=btn.closest('.lightbox');
+                    if(lb){lb.style.display='none';
+                    history.pushState("",document.title,window.location.pathname+window.location.search);}
+                });
+            });
+        </script>
+    </div>
+
+    <a href="../index.html" class="btn-back">Retour</a>
+
+</body>
+</html>
