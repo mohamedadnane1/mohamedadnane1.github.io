@@ -151,6 +151,138 @@ Circle Progress Bar
   color: white;
 }
 
+
+@keyframes javascript-progress {
+  to {
+    --progress-value: 85;
+  }
+}
+
+@keyframes ajax-progress {
+  to {
+    --progress-value: 90;
+  }
+}
+
+.ajax {
+  background: radial-gradient(
+      closest-side,
+      black 79%,
+      transparent 80% 100%,
+      black 0
+    ),
+    conic-gradient(white calc(var(--progress-value) * 1%), black 0);
+  animation: ajax-progress 2s 1 forwards;
+}
+.ajax::before {
+  animation: ajax-progress 2s 1 forwards;
+}
+
+@keyframes django-progress {
+  to {
+    --progress-value: 80;
+  }
+}
+.django {
+  background: radial-gradient(closest-side, black 79%, transparent 80% 100%, black 0),
+    conic-gradient(white calc(var(--progress-value) * 1%), black 0);
+  animation: django-progress 2s 1 forwards;
+}
+.django::before {
+  animation: django-progress 2s 1 forwards;
+}
+
+@keyframes bash-progress {
+  to {
+    --progress-value: 70;
+  }
+}
+.bash {
+  background: radial-gradient(closest-side, black 79%, transparent 80% 100%, black 0),
+    conic-gradient(white calc(var(--progress-value) * 1%), black 0);
+  animation: bash-progress 2s 1 forwards;
+}
+.bash::before {
+  animation: bash-progress 2s 1 forwards;
+}
+
+@keyframes latex-progress {
+  to {
+    --progress-value: 85;
+  }
+}
+.latex {
+  background: radial-gradient(closest-side, black 79%, transparent 80% 100%, black 0),
+    conic-gradient(white calc(var(--progress-value) * 1%), black 0);
+  animation: latex-progress 2s 1 forwards;
+}
+.latex::before {
+  animation: latex-progress 2s 1 forwards;
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colonnes */
+  gap: 30px;
+  justify-items: center;
+  margin-top: 30px;
+}
+@media screen and (max-width: 992px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur tablette */
+  }
+}
+@media screen and (max-width: 600px) {
+  .skills-grid {
+    grid-template-columns: 1fr; /* 1 colonne sur mobile */
+  }
+}
+
+
+@keyframes kotlin-progress {
+  to {
+    --progress-value: 75;
+  }
+}
+.kotlin {
+  background: radial-gradient(closest-side, black 79%, transparent 80% 100%, black 0),
+    conic-gradient(white calc(var(--progress-value) * 1%), black 0);
+  animation: kotlin-progress 2s 1 forwards;
+}
+.kotlin::before {
+  animation: kotlin-progress 2s 1 forwards;
+}
+
+@keyframes jquery-progress {
+  to {
+    --progress-value: 95;
+  }
+}
+.jquery {
+  background: radial-gradient(closest-side, black 79%, transparent 80% 100%, black 0),
+    conic-gradient(white calc(var(--progress-value) * 1%), black 0);
+  animation: jquery-progress 2s 1 forwards;
+}
+.jquery::before {
+  animation: jquery-progress 2s 1 forwards;
+}
+
+
+.javascript {
+  background: radial-gradient(
+      closest-side,
+      black 79%,
+      transparent 80% 100%,
+      black 0
+    ),
+    conic-gradient(white calc(var(--progress-value) * 1%), black 0);
+  animation: javascript-progress 2s 1 forwards;
+}
+
+.javascript::before {
+  animation: javascript-progress 2s 1 forwards;
+}
+
+
 .html {
   background: radial-gradient(
       closest-side,
