@@ -548,50 +548,61 @@
 
       <!-- Contact Section -->
       <div class="w3-padding-32 w3-content" id="contact">
-        <h2 class="section-title" data-translate="contactTitle" >Contact</h2>
-        <hr style="width: 100%" class="w3-opacity w3-center" />
+  <h2 class="section-title" data-translate="contactTitle">Contact</h2>
+  <hr style="width: 100%" class="w3-opacity w3-center" />
 
-        <div class="w3-section">
-          <p>
-            <i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i>
-            <span data-translate="address">Avignon, France</span>
-          </p>
-          <p>
-            <i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i>
-            <span data-translate="phoneLabel">Phone:</span>
-            <span >07 67 35 16 49</span>
-          </p>
-          <p>
-            <i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"></i>
-            <span data-translate="emailLabel">Email:</span>
-            <span >mohamedadnanelycee@gmail.com</span>
-          </p>
-        </div>
+  <div class="w3-section">
+    <p>
+      <i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i>
+      <span data-translate="address">Avignon, France</span>
+    </p>
+    <p>
+      <i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i>
+      <span data-translate="phoneLabel">Phone:</span>
+      <span>07 67 35 16 49</span>
+    </p>
+    <p>
+      <i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"></i>
+      <span data-translate="emailLabel">Email:</span>
+      <span>mohamedadnanelycee@gmail.com</span>
+    </p>
+  </div>
 
-        <br />
-        <p data-translate="leaveMessage">Laissez moi un message.</p>
+  <br />
+  <p data-translate="leaveMessage">Laissez-moi un message.</p>
+<!-- Ajoute le script reCAPTCHA v2 dans <head> ou juste avant </body> -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-        <form action="https://formspree.io/f/xaygkwvk" method="POST" target="_blank">
-          <p>
-            <input class="w3-input w3-padding-16" type="text" placeholder="Nom" required name="Name" data-translate-placeholder="namePlaceholder"/>
-          </p>
-          <p>
-            <input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email" data-translate-placeholder="emailPlaceholder"/>
-          </p>
-          <p>
-            <input class="w3-input w3-padding-16" type="text" placeholder="Object" required name="Subject" data-translate-placeholder="subjectPlaceholder"/>
-          </p>
-          <p>
-            <input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message" data-translate-placeholder="messagePlaceholder"/>
-          </p>
-          <p>
-            <button class="w3-button w3-light-grey w3-padding-large" type="submit" data-translate="sendMessage">
-              <i class="fa fa-paper-plane"></i> ENVOYER MESSAGE
-            </button>
-          </p>
-        </form>
-        
-      </div>
+<form action="https://formspree.io/f/xaygkwvk" method="POST" target="_blank">
+  <p>
+    <input class="w3-input w3-padding-16" type="text" name="Name" placeholder="Nom" required data-translate-placeholder="namePlaceholder">
+  </p>
+  <p>
+    <input class="w3-input w3-padding-16" type="email" name="Email" placeholder="Email" required data-translate-placeholder="emailPlaceholder">
+  </p>
+  <p>
+    <input class="w3-input w3-padding-16" type="text" name="Subject" placeholder="Objet" required data-translate-placeholder="subjectPlaceholder">
+  </p>
+  <p>
+    <textarea class="w3-input w3-padding-16" name="Message" placeholder="Message" required rows="6" data-translate-placeholder="messagePlaceholder"></textarea>
+  </p>
+
+  <!-- ✅ Intégration reCAPTCHA (clé publique) -->
+  <div class="g-recaptcha" data-sitekey="6Lf0XmYrAAAAAK2IdwIowO1BEandIjSEl1VL3YrL"></div>
+
+  <!-- Champ anti-spam (honeypot) -->
+  <input type="text" name="_gotcha" style="display:none">
+
+  <p>
+    <button class="w3-button w3-light-grey w3-padding-large" type="submit" data-translate="sendMessage">
+      <i class="fa fa-paper-plane"></i> ENVOYER MESSAGE
+    </button>
+  </p>
+</form>
+
+</div>
+
+
 
       <!-- Footer -->
       <footer class="w3-content  w3-text-grey w3-xlarge">
