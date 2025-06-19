@@ -570,36 +570,32 @@
 
   <br />
   <p data-translate="leaveMessage">Laissez-moi un message.</p>
-<!-- Ajoute le script reCAPTCHA v2 dans <head> ou juste avant </body> -->
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+ <form action="https://formspree.io/f/xyzjprpe" method="POST" target="_blank" autocomplete="off">
+    <p>
+      <input class="w3-input w3-padding-16" type="text" name="name" placeholder="Nom" required data-translate-placeholder="namePlaceholder">
+    </p>
+    <p>
+      <input class="w3-input w3-padding-16" type="email" name="email" placeholder="Email" required data-translate-placeholder="emailPlaceholder">
+    </p>
+    <p>
+      <input class="w3-input w3-padding-16" type="text" name="subject" placeholder="Objet" required data-translate-placeholder="subjectPlaceholder">
+    </p>
+    <p>
+      <textarea class="w3-input w3-padding-16" name="message" rows="6" placeholder="Message" required data-translate-placeholder="messagePlaceholder"></textarea>
+    </p>
 
-<form action="https://formspree.io/f/xaygkwvk" method="POST" target="_blank">
-  <p>
-    <input class="w3-input w3-padding-16" type="text" name="Name" placeholder="Nom" required data-translate-placeholder="namePlaceholder">
-  </p>
-  <p>
-    <input class="w3-input w3-padding-16" type="email" name="Email" placeholder="Email" required data-translate-placeholder="emailPlaceholder">
-  </p>
-  <p>
-    <input class="w3-input w3-padding-16" type="text" name="Subject" placeholder="Objet" required data-translate-placeholder="subjectPlaceholder">
-  </p>
-  <p>
-    <textarea class="w3-input w3-padding-16" name="Message" placeholder="Message" required rows="6" data-translate-placeholder="messagePlaceholder"></textarea>
-  </p>
+    <!-- Champ honeypot invisible (piège pour les bots) -->
+    <input type="text" name="_gotcha" style="display:none">
 
-  <!-- ✅ Intégration reCAPTCHA (clé publique) -->
-  <div class="g-recaptcha" data-sitekey="6Lf0XmYrAAAAAK2IdwIowO1BEandIjSEl1VL3YrL" data-action="LOGIN"></div>
+    <!-- (Optionnel) Redirection après envoi -->
+    <input type="hidden" name="_redirect" value="https://mohamedadnane1.github.io/#">
 
-  <!-- Champ anti-spam (honeypot) -->
-  <input type="text" name="_gotcha" style="display:none">
-
-  <p>
-    <button class="w3-button w3-light-grey w3-padding-large" type="submit" data-translate="sendMessage">
-      <i class="fa fa-paper-plane"></i> ENVOYER MESSAGE
-    </button>
-  </p>
-</form>
-
+    <p>
+      <button class="w3-button w3-light-grey w3-padding-large" type="submit" data-translate="sendMessage">
+        <i class="fa fa-paper-plane"></i> ENVOYER MESSAGE
+      </button>
+    </p>
+  </form>
 </div>
 
 
